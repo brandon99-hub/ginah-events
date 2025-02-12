@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="29ed927f-d044-481d-81db-0fc74b402c6f" name="Changes" comment="logo" />
+    <list default="true" id="29ed927f-d044-481d-81db-0fc74b402c6f" name="Changes" comment="logo">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_management/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_management/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/manage.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,10 +43,10 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3\event_management" />
+      <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3" />
       <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3\event_management\static\images" />
       <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3\event_management\events\templates\registration" />
       <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3\event_management\events\templates\events" />
-      <recent name="C:\Users\ADMIN\PycharmProjects\PythonProject\PythonProject3\event_management\media\event_photos" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -61,7 +66,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739178530336</updated>
       <workItem from="1739304192202" duration="891000" />
-      <workItem from="1739305331752" duration="11816000" />
+      <workItem from="1739305331752" duration="15887000" />
     </task>
     <task id="LOCAL-00001" summary="updated the contact form and backend">
       <option name="closed" value="true" />
@@ -103,7 +108,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739375037660</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="logo">
+      <option name="closed" value="true" />
+      <created>1739375479351</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1739375479351</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
