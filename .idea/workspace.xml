@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="29ed927f-d044-481d-81db-0fc74b402c6f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/PythonProject3.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/static/css/styles.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/base.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/book_tickets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/booking_success.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/contact.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/event_detail.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/event_list.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/logout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/events/signup.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/events/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/static/images/favicon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/event_management/static/images/geoginah_logo.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_management/event_management/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/event_management/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_management/events/templates/events/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/events/templates/events/contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/event_management/events/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/event_management/events/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +65,7 @@
       <option name="presentableId" value="Default" />
       <updated>1739178530336</updated>
       <workItem from="1739304192202" duration="891000" />
-      <workItem from="1739305331752" duration="7355000" />
+      <workItem from="1739305331752" duration="8719000" />
     </task>
     <servers />
   </component>

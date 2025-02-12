@@ -30,7 +30,31 @@ def event_detail(request, event_id):
 # Contact Page View
 @login_required
 def contact(request):
-    return render(request, 'events/contact.html')
+    if request.method == 'POST':
+        # Retrieve form data
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+
+        # Compose the full message
+        full_message = f"Message from {name} ({email}):\n\n{message}"
+
+        try:
+            send_mail(
+                subject,  # Subject of the email
+                full_message,  # Message body
+                settings.DEFAULT_FROM_EMAIL,  # Sender's email
+                [settings.DEFAULT_FROM_EMAIL],  # Recipient list (your email)
+                fail_silently=False,  # Raise an error if email sending fails
+            )
+            messages.success(request, "Your message has been sent successfully!")
+        except Exception as e:
+            messages.error(request, f"An error occurred while sending your message: {e}")
+
+        return redirect('contact')  # Redirect back to the contact page after submission
+    else:
+        return render(request, 'events/contact.html')
 
 # Buy Ticket View
 @login_required
