@@ -11,6 +11,8 @@ from django.contrib.auth.decorators import login_required
 from django.utils import timezone
 from .models import Event, Ticket, Reminder
 from .forms import ReviewForm, TicketBookingForm
+from django.core.mail import send_mail
+
 
 
 # Event List View
