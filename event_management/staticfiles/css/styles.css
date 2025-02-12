@@ -1,0 +1,273 @@
+/* events/static/css/styles.css */
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    background-color: #f4f4f4; /* Light off-white for a clean look */
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1, h2 {
+    color: #6F4E37; /* Coffee brown for headers */
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border: 1px solid #6F4E37; /* Coffee brown border for subtle highlight */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #6F4E37; /* Coffee brown for the nav bar */
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+}
+
+.navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.logo {
+    height: 50px; /* Adjust size as needed */
+    width: auto;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    background-color: #8B694F; /* Slightly lighter shade of coffee brown on hover */
+}
+
+/* Event Cards */
+.event-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.event-item {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    width: calc(33.333% - 20px); /* Three cards per row with some margin */
+    margin-bottom: 20px;
+}
+
+.event-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid #6F4E37; /* Coffee brown border for event photos */
+}
+
+.event-title {
+    font-size: 1.5em;
+    margin: 15px 10px;
+    color: #6F4E37; /* Coffee brown for the title */
+}
+
+.event-details {
+    font-size: 1em;
+    margin: 0 10px 15px;
+    color: #333; /* Dark grey for readability */
+}
+
+.event-details .event-date, .event-details .event-type {
+    color: #D64550; /* Pink accent for date and type */
+}
+
+.event-item .btn {
+    display: inline-block;
+    margin: 10px;
+    padding: 8px 15px;
+    background: #d5a27a; /* Light coffee brown for buttons */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.event-item .btn:hover {
+    background: #b4825c; /* Darker coffee brown on hover */
+}
+
+/* Event Hover Effect */
+.event-item:hover {
+    transform: translateY(-5px);
+}
+
+.event-detail {
+    padding: 20px;
+    background: #F5F5F5;
+    border-radius: 8px;
+}
+
+.event-detail h1 {
+    border-bottom: 2px solid #6F4E37;
+    padding-bottom: 10px;
+    color: #6F4E37;
+}
+
+form {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #6F4E37; /* Coffee brown for buttons */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #8B694F; /* Darker shade on hover */
+    transform: translateY(-2px);
+}
+
+/* Footer */
+.site-footer {
+    background-color: #6F4E37; /* Coffee brown */
+    color: #fff;
+    padding: 2px 0;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.site-footer p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-tagline {
+    font-size: 1.1em;
+    color: #f1c6c1; /* Light pink color */
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.footer-social {
+    margin-top: 10px;
+}
+
+.footer-social a {
+    text-decoration: none;
+    color: #f1c6c1; /* Light pink */
+    font-size: 1.2rem;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #e09b94; /* Darker pink on hover */
+}
+
+/* Contact Info Section */
+.contact-info {
+    background-color: #f1c6c1; /* Light pink */
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info strong {
+    color: #3e2c41;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: #fff;
+}
+
+.form-group {
+    margin-bottom: 2px;
+}
+
+label {
+    display: block;
+    color: #3e2c41; /* Coffee brown */
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input, select, textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 150px;
+}
+
+button {
+    background-color: #f1c6c1; /* Light pink */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e09b94; /* Darker pink on hover */
+}
+
+/* Social Links Section */
+.social-links {
+    background-color: #f1c6c1; /* Light pink */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.social-links a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #3e2c41; /* Coffee brown */
+    font-size: 1.1rem;
+}
+
+.social-links a:hover {
+    color: #e09b94; /* Darker pink on hover */
+}
+
+/* Map Section */
+.google-map iframe {
+    width: 100%;
+    height: 400px;
+    border-radius: 8px;
+}

@@ -1,0 +1,107 @@
+{% extends 'events/base.html' %}
+
+{% block title %}{{ event.title }}{% endblock %}
+
+{% block content %}
+<div class="event-detail">
+    <h1>{{ event.title }}</h1>
+    <p>{{ event.description }}</p>
+    <p><strong>Date:</strong> {{ event.date }}</p>
+    <p><strong>Location:</strong> {{ event.location }}</p>
+    <p><strong>Price:</strong> {{ event.price }} KES</p>
+    <p><strong>Available Tickets:</strong> {{ event.available_tickets }}</p>
+
+    {% if user.is_authenticated %}
+        <!-- Payment Form -->
+        <form id="payment-form">
+            <div id="card-element"></div>
+            <button type="submit">Pay Now</button>
+        </form>
+        <!-- Display errors for payment -->
+        <div id="card-errors" role="alert" style="color: red; margin-top: 10px;"></div>
+
+        <!-- Book Ticket Button -->
+        <a href="{% url 'book_tickets'%}" class="btn btn-secondary" style="margin-top: 20px; display: inline-block;">Book Ticket</a>
+    {% else %}
+        <p>Please <a href="{% url 'login' %}">login</a> to buy or book tickets.</p>
+    {% endif %}
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
+
+{% if user.is_authenticated %}
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("DOM fully loaded. Initializing Pesapal integration.");
+
+    var paymentForm = document.getElementById('payment-form');
+    if (paymentForm) {
+        paymentForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            console.log("Payment form submitted. Initiating Pesapal payment process.");
+
+            // Helper function to retrieve the CSRF token from cookies
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie !== '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = cookies[i].trim();
+                        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            var csrftoken = getCookie('csrftoken');
+            console.log("CSRF token:", csrftoken);
+
+            // Send a request to your backend to create a Pesapal payment
+            fetch('{% url "pesapal_charge" event.id %}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': csrftoken
+                },
+                body: JSON.stringify({
+                    event_id: '{{ event.id }}'
+                    // Include additional fields as needed for your Pesapal request
+                })
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(data) {
+                if (data.error) {
+                    console.error("Backend error:", data.error);
+                    document.getElementById('card-errors').textContent = data.error;
+                } else if (data.redirect_url) {
+                    console.log("Redirect URL received from backend:", data.redirect_url);
+                    // Redirect the user to the Pesapal payment page
+                    window.location.href = data.redirect_url;
+                } else {
+                    document.getElementById('card-errors').textContent = "Unexpected server response.";
+                }
+            })
+            .catch(function(err) {
+                console.error("Fetch error:", err);
+                document.getElementById('card-errors').textContent = "An error occurred. Please try again.";
+            });
+        });
+    } else {
+        console.error("Payment form not found in the DOM.");
+    }
+});
+</script>
+
+{% endif %}
+{% endblock %}
