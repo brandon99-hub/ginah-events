@@ -142,7 +142,7 @@ EMAIL_HOST_USER = 'brandmwenja@gmail.com'  # your email address
 EMAIL_HOST_PASSWORD = 'zhoz chgx girp yswp'  # your email password or app-specific password
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-ALLOWED_HOSTS="ginah-events.onrender.com"
+ALLOWED_HOSTS=("ginah-events.onrender.com")
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
